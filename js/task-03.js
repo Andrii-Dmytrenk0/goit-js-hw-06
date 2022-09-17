@@ -12,3 +12,58 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const list = document.querySelector(".gallery");
+
+const markup = images
+  .map((image) => `<li><img class="gallery-items__img" src="${image.url}" alt="${image.alt}"></li>`)
+  .join("");
+
+list.insertAdjacentHTML("beforeend", markup);
+
+
+// const aaa = images.flatMap(image => image.url).join('');
+// console.log(aaa);
+
+// const bbb = images.flatMap(image => image.alt).join('');
+// console.log(bbb);
+
+// const listEl = document.querySelector('.gallery');
+  
+//   const elList = document.createElement('li');
+  
+//   const elImg = document.createElement('img');
+
+//   elImg.setAttribute('url', aaa);
+//   elImg.setAttribute('alt', bbb);
+//   elList.append(elImg);
+
+
+// // const createCardMarkup = img => {
+// //   console.log(img);
+// //   return ``;
+// // }
+// // console.log(images[0]);
+// // const createCard = function () {
+ 
+// // }
+// // createCard();
+// // console.log(listEl);
+
+// listEl.insertAdjacentHTML("afterbegin", elList);
+    
+// function createCard() {
+//   for (i = 0; i < images.length; i += 1) {
+//     const asins = images[i];
+//     // const elList = document.createElement('li');
+//     // const elImg = document.createElement('img');
+//     // elImg.setAttribute('url', asins);
+//     // elImg.setAttribute('alt', asins);
+//     // elList.append(elImg);
+//     // listEl.append(elList);
+//     // console.log(elList)
+//   }
+//   console.log(elList)
+// }
+
+// console.log(elList)
