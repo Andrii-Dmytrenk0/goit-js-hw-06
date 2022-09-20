@@ -13,15 +13,22 @@ const ingredients = [
 
 const listEl = document.querySelector('ul');
 
+const boxesEl = [];
 for (let i = 0; i < ingredients.length; i += 1) {
   const elements = ingredients[i];
 
   const listElItem = document.createElement('li');
   listElItem.classList.add('item');
   listElItem.textContent = elements;
+  boxesEl.push(listElItem);
+};
+console.log(boxesEl)
+listEl.append(...boxesEl);
   
-  listEl.append(listElItem);
-}
+
+
+
+
 // const listElItem = document.createElement('li');
 // listElItem.classList.add('item');
 // listElItem.textContent = ingredients[0];
